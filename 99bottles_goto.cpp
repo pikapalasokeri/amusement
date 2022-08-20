@@ -5,8 +5,7 @@
 // Also builds with clang 11.
 int main()
 {
-  constexpr int total_bottles{99};
-  int bottle_count{0};
+  int bottles{99};
 
   constexpr void* labels[] =
     {
@@ -15,9 +14,9 @@ int main()
     };
 
 next_bottle:
-  std::cout << (total_bottles - bottle_count) << std::endl;
-  int label_index = bottle_count / total_bottles;
-  ++bottle_count;
+  std::cout << bottles << std::endl;
+  int const label_index{bottles == 0};
+  --bottles;
   goto* labels[label_index];
 done:
   return 0;
