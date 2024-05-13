@@ -1,7 +1,6 @@
-#include <array>
 #include <iostream>
 
-std::array<void (*)(int), 2> fptrs;
+void (*fptrs[2])(int);
 
 void recurse(int const num_bottles)
 {

@@ -6,7 +6,7 @@ struct Base
   virtual void next(int const) const = 0;
 };
 
-std::array<Base*, 2> actions;
+Base* actions[2];
 
 struct Continue : public Base
 {

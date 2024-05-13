@@ -1,8 +1,7 @@
-#include <array>
 #include <functional>
 #include <iostream>
 
-using FuncsT = std::array<std::function<void(int)>, 2>;
+using FuncsT = std::function<void(int)>[2];
 
 int main()
 {
